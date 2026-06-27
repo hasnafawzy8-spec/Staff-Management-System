@@ -1,0 +1,69 @@
+<!-- src/main/resources/templates/attendance_form.html -->
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Add Attendance</title>
+    <link rel="stylesheet" th:href="@{/css/account.css}"/>
+</head>
+<body>
+<div class="layout">
+    <!-- Sidebar -->
+    <aside class="side">
+        <div class="brand">Account</div>
+        <nav class="nav">
+            <h5>My Actions</h5>
+            <a th:href="@{/attendance}" class="active">My Attendance</a>
+            <a th:href="@{/leaves}">My Leave Requests</a>
+
+            <h5>Account</h5>
+            <a th:href="@{/account/profile}">My Profile</a>
+            <a th:href="@{/logout}">Logout</a>
+        </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+        <div class="heading">
+            <h2>Add Attendance</h2>
+        </div>
+
+        <form th:action="@{/attendance}" th:object="${rec}" method="post" class="card form">
+            <div class="grid">
+                <label class="field">
+                    <span>Date</span>
+                    <input type="date" th:field="*{workDate}"/>
+                </label>
+                <label class="field">
+                    <span>Time In</span>
+                    <input type="time" th:field="*{timeIn}"/>
+                </label>
+                <label class="field">
+                    <span>Time Out</span>
+                    <input type="time" th:field="*{timeOut}"/>
+                </label>
+                <label class="field">
+                    <span>Status</span>
+                    <select th:field="*{status}">
+                        <option value="PRESENT">PRESENT</option>
+                        <option value="ABSENT">ABSENT</option>
+                        <option value="LATE">LATE</option>
+                        <option value="HALF_DAY">HALF_DAY</option>
+                    </select>
+                </label>
+                <label class="field col-span-2">
+                    <span>Remarks</span>
+                    <input th:field="*{remarks}" placeholder="Optional remarks"/>
+                </label>
+            </div>
+
+            <div class="actions">
+                <a th:href="@{/attendance}" class="btn ghost">Back</a>
+                <button type="submit" class="btn primary">Save</button>
+            </div>
+        </form>
+    </main>
+</div>
+</body>
+</html>

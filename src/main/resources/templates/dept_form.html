@@ -1,0 +1,373 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title th:text="${dept.id == null ? 'Create Department' : 'Edit Department'}"></title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --ink: #0f172a;
+      --muted: #64748b;
+      --accent: #1e40af;
+      --accent-light: #eef2ff;
+      --card: #ffffff;
+      --shadow: 0 8px 24px rgba(15, 23, 42, .08);
+      --ring: rgba(37, 99, 235, .25);
+      --radius: 22px;
+      --transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes shimmer {
+      0% {
+        background-position: -1000px 0;
+      }
+      100% {
+        background-position: 1000px 0;
+      }
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1e40af 100%);
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.6;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image:
+              radial-gradient(circle at 15% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+              radial-gradient(circle at 85% 30%, rgba(96, 165, 250, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 50% 80%, rgba(30, 64, 175, 0.2) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image:
+              url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233b82f6' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.4;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      min-height: 100vh;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Sidebar */
+    .side {
+      padding: 24px 18px;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(20px);
+      border-right: 1px solid rgba(59, 130, 246, 0.2);
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 1.25rem;
+      background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 16px;
+    }
+
+    .nav h5 {
+      margin: 1rem 0 .4rem;
+      color: rgba(186, 230, 253, 0.7);
+      font-weight: 600;
+      font-size: .78rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .nav a {
+      display: block;
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.9);
+      padding: 12px 14px;
+      border-radius: 12px;
+      margin: 6px 0;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      transition: var(--transition);
+      border: 1px solid rgba(59, 130, 246, 0.1);
+    }
+
+    .nav a:hover {
+      background: rgba(59, 130, 246, 0.2);
+      border-color: rgba(59, 130, 246, 0.3);
+      transform: translateX(4px);
+    }
+
+    .nav a.active {
+      background: rgba(59, 130, 246, 0.25);
+      color: #fff;
+      font-weight: 600;
+      border-color: rgba(59, 130, 246, 0.4);
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    }
+
+    /* Main */
+    .main {
+      padding: 32px;
+      max-width: 1000px;
+    }
+
+    .heading {
+      margin-bottom: 24px;
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    .heading h2 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #fff 0%, #bae6fd 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Card */
+    .card {
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(20px);
+      border-radius: 28px;
+      box-shadow: 0 20px 60px rgba(30, 64, 175, 0.15), 0 0 0 1px rgba(59, 130, 246, 0.1);
+      padding: 32px;
+      animation: fadeIn 0.6s ease-out 0.1s both;
+      border: 1px solid rgba(59, 130, 246, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #3b82f6, #60a5fa, #3b82f6);
+      background-size: 200% 100%;
+      animation: shimmer 3s linear infinite;
+    }
+
+    /* Form Grid */
+    .grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .field span {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+    }
+
+    .field input,
+    .field select {
+      padding: 12px 16px;
+      border: 2px solid rgba(59, 130, 246, 0.15);
+      border-radius: 12px;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: var(--transition);
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    .field input:focus,
+    .field select:focus {
+      outline: none;
+      border-color: #3b82f6;
+      background: #fff;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    .field input::placeholder {
+      color: var(--muted);
+    }
+
+    /* Actions */
+    .actions {
+      margin-top: 32px;
+      display: flex;
+      gap: 12px;
+      justify-content: flex-end;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
+      font-family: inherit;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn.primary {
+      background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+      color: white;
+      box-shadow: 0 8px 20px rgba(59, 130, 246, 0.35);
+    }
+
+    .btn.primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(59, 130, 246, 0.45);
+    }
+
+    .btn.ghost {
+      background: rgba(241, 245, 249, 0.8);
+      color: var(--ink);
+      border: 1px solid rgba(59, 130, 246, 0.1);
+    }
+
+    .btn.ghost:hover {
+      background: rgba(226, 232, 240, 0.9);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .side {
+        border-right: none;
+        border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+      }
+
+      .main {
+        padding: 24px 16px;
+      }
+
+      .heading h2 {
+        font-size: 1.5rem;
+      }
+
+      .actions {
+        flex-direction: column-reverse;
+      }
+
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="layout">
+  <!-- Sidebar -->
+  <aside class="side">
+    <div class="brand">Admin</div>
+    <nav class="nav">
+      <h5>People</h5>
+      <a th:href="@{/admin/employees}">Employees</a>
+      <a th:href="@{/admin/departments}" class="active">Departments</a>
+
+      <h5>Me</h5>
+      <a th:href="@{/account/profile}">My Profile</a>
+      <a th:href="@{/logout}">Logout</a>
+    </nav>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+    <div class="heading">
+      <h2 th:text="${dept.id == null ? 'Create Department' : 'Edit Department'}">Create Department</h2>
+    </div>
+
+    <form th:action="${dept.id == null} ? @{/admin/departments} : @{'/admin/departments/' + ${dept.id}}"
+          th:object="${dept}" method="post" class="card form">
+
+      <div class="grid">
+        <label class="field">
+          <span>Department Name</span>
+          <input th:field="*{deptName}" placeholder="Department Name" required />
+        </label>
+        <label class="field">
+          <span>Description</span>
+          <input th:field="*{description}" placeholder="Description" />
+        </label>
+        <label class="field">
+          <span>Admin (optional)</span>
+          <select name="adminEmployeeId">
+            <option value="">-- None --</option>
+            <option th:each="e : ${employees}"
+                    th:value="${e.id}"
+                    th:text="${e.username + ' (' + e.accessType + ')'}"
+                    th:selected="${dept.admin != null and e.id == dept.admin.id}">
+            </option>
+          </select>
+        </label>
+      </div>
+
+      <div class="actions">
+        <a th:href="@{/admin/departments}" class="btn ghost">Back to List</a>
+        <button type="submit" class="btn primary">Save</button>
+      </div>
+    </form>
+  </main>
+</div>
+</body>
+</html>

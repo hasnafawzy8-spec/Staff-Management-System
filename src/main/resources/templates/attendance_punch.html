@@ -1,0 +1,491 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Punch Attendance</title>
+    <style>
+        :root {
+            --bg: #f8fafc;
+            --ink: #0f172a;
+            --muted: #64748b;
+            --accent: #1e40af;
+            --accent-light: #3b82f6;
+            --success: #16a34a;
+            --danger: #dc2626;
+            --card: rgba(255,255,255,0.98);
+            --shadow: 0 6px 18px rgba(15,23,42,.08);
+            --radius: 20px;
+            --transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -1000px 0;
+            }
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+
+        body {
+            margin: 0;
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1e40af 100%);
+            min-height: 100vh;
+            color: var(--ink);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            line-height: 1.6;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                    radial-gradient(circle at 15% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+                    radial-gradient(circle at 85% 30%, rgba(96, 165, 250, 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 50% 80%, rgba(30, 64, 175, 0.2) 0%, transparent 60%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233b82f6' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.4;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            min-height: 100vh;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Sidebar */
+        .side {
+            padding: 32px 20px;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            border-right: 1px solid rgba(59, 130, 246, 0.1);
+            box-shadow: 4px 0 24px rgba(30, 64, 175, 0.1);
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        .brand {
+            font-weight: 800;
+            font-size: 1.5rem;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 32px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand::before {
+            content: '';
+            width: 8px;
+            height: 32px;
+            background: linear-gradient(180deg, #3b82f6 0%, #1e40af 100%);
+            border-radius: 4px;
+            box-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
+        }
+
+        .nav h5 {
+            margin: 24px 0 12px;
+            color: var(--muted);
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav h5::before {
+            content: '';
+            width: 3px;
+            height: 12px;
+            background: linear-gradient(180deg, #3b82f6, #1e40af);
+            border-radius: 2px;
+        }
+
+        .nav a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--ink);
+            padding: 14px 16px;
+            border-radius: 16px;
+            margin: 6px 0;
+            background: white;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .nav a:hover {
+            transform: translateX(4px);
+            background: rgba(59, 130, 246, 0.05);
+            border-color: rgba(59, 130, 246, 0.3);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+        }
+
+        .nav a.active {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+            color: white;
+            font-weight: 700;
+            border-color: transparent;
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.35);
+        }
+
+        /* Main */
+        .main {
+            padding: 48px;
+            animation: fadeIn 0.6s ease-out 0.2s both;
+        }
+
+        .heading {
+            margin-bottom: 40px;
+        }
+
+        .heading h2 {
+            margin: 0 0 8px;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: white;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .heading h2::before {
+            content: '';
+            width: 6px;
+            height: 48px;
+            background: linear-gradient(180deg, #60a5fa, #3b82f6);
+            border-radius: 4px;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+        }
+
+        .heading p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+            margin-left: 22px;
+        }
+
+        /* Punch Options */
+        .punch-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            max-width: 800px;
+        }
+
+        .punch-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 48px 32px;
+            background: var(--card);
+            backdrop-filter: blur(20px);
+            border-radius: 28px;
+            box-shadow: 0 20px 60px rgba(30, 64, 175, 0.15);
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            border: 2px solid rgba(59, 130, 246, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .punch-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #60a5fa, #3b82f6);
+            background-size: 200% 100%;
+            animation: shimmer 3s linear infinite;
+        }
+
+        .punch-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .punch-card.in::after {
+            background: linear-gradient(135deg, rgba(22, 163, 74, 0.05) 0%, rgba(34, 197, 94, 0.08) 100%);
+        }
+
+        .punch-card.out::after {
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.05) 0%, rgba(239, 68, 68, 0.08) 100%);
+        }
+
+        .punch-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 30px 70px rgba(59, 130, 246, 0.25);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+
+        .punch-card:hover::after {
+            opacity: 1;
+        }
+
+        .punch-card:hover .icon-wrapper {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .icon-wrapper {
+            width: 96px;
+            height: 96px;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            transition: var(--transition);
+            position: relative;
+            z-index: 1;
+        }
+
+        .punch-card.in .icon-wrapper {
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            box-shadow: 0 12px 28px rgba(34, 197, 94, 0.4);
+        }
+
+        .punch-card.out .icon-wrapper {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            box-shadow: 0 12px 28px rgba(239, 68, 68, 0.4);
+        }
+
+        .punch-card svg {
+            width: 56px;
+            height: 56px;
+            color: white;
+        }
+
+        .punch-card span {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--ink);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Info */
+        .muted {
+            margin-top: 40px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px 32px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        /* Back link */
+        .actions {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            border-radius: 16px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        @media (max-width: 880px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+
+            .side {
+                border-right: none;
+                border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+            }
+
+            .main {
+                padding: 32px 24px;
+            }
+
+            .heading h2 {
+                font-size: 2rem;
+            }
+
+            .punch-options {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="layout">
+    <!-- Sidebar -->
+    <aside class="side">
+        <div class="brand">Account</div>
+        <nav class="nav">
+            <h5>My Actions</h5>
+            <a th:href="@{/attendance}" class="active">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+                </svg>
+                My Attendance
+            </a>
+            <a th:href="@{/leaves}">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>
+                </svg>
+                My Leave Requests
+            </a>
+
+            <h5>Account</h5>
+            <a th:href="@{/account/profile}">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="8" r="4"/><path d="M4 20a8 8 0 0 1 16 0"/>
+                </svg>
+                My Profile
+            </a>
+            <a th:href="@{/logout}">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/>
+                </svg>
+                Logout
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+        <div class="heading">
+            <h2>Punch Attendance</h2>
+            <p>Select your action to record attendance</p>
+        </div>
+
+        <!-- Punch Selection -->
+        <form th:action="@{/attendance/punch}" method="post">
+            <div class="punch-options">
+                <!-- Punch In -->
+                <button type="submit" name="action" value="IN" class="punch-card in">
+                    <div class="icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <span>Punch In</span>
+                </button>
+
+                <!-- Punch Out -->
+                <button type="submit" name="action" value="OUT" class="punch-card out">
+                    <div class="icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"/>
+                        </svg>
+                    </div>
+                    <span>Punch Out</span>
+                </button>
+            </div>
+        </form>
+
+        <p class="muted">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+            </svg>
+            Time and date are recorded automatically on the server
+        </p>
+
+        <div class="actions">
+            <a th:href="@{/attendance}" class="btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back to Attendance
+            </a>
+        </div>
+    </main>
+</div>
+</body>
+</html>

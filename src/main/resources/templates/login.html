@@ -1,0 +1,362 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Login - StaffWave</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(circle at center, #0f172a 0%, #020617 100%);
+      color: #fff;
+      overflow: hidden;
+      cursor: none;
+    }
+
+    /* Enhanced animated background */
+    .grid-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:
+              radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.25) 0%, transparent 50%),
+              radial-gradient(circle at 80% 70%, rgba(96, 165, 250, 0.2) 0%, transparent 50%),
+              radial-gradient(circle at 50% 50%, rgba(30, 64, 175, 0.15) 0%, transparent 70%),
+              repeating-radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.08) 0 2px, transparent 2px 60px);
+      mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 40%, transparent 100%);
+      animation: pulse 8s infinite alternate;
+    }
+
+    @keyframes pulse {
+      from {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.9;
+      }
+      to {
+        transform: scale(1.15) rotate(2deg);
+        opacity: 0.6;
+      }
+    }
+
+    /* Floating particles */
+    .particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: rgba(59, 130, 246, 0.6);
+      border-radius: 50%;
+      animation: float 6s infinite ease-in-out;
+      box-shadow: 0 0 10px rgba(59, 130, 246, 0.8);
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) translateX(20px);
+        opacity: 0;
+      }
+    }
+
+    .particle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 8s; }
+    .particle:nth-child(2) { left: 25%; animation-delay: 2s; animation-duration: 10s; }
+    .particle:nth-child(3) { left: 40%; animation-delay: 4s; animation-duration: 7s; }
+    .particle:nth-child(4) { left: 60%; animation-delay: 1s; animation-duration: 9s; }
+    .particle:nth-child(5) { left: 75%; animation-delay: 3s; animation-duration: 11s; }
+    .particle:nth-child(6) { left: 90%; animation-delay: 5s; animation-duration: 8s; }
+
+    /* Login Card */
+    .login-container {
+      position: relative;
+      z-index: 1;
+      background: rgba(20, 20, 35, 0.85);
+      padding: 2.5rem 2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(59, 130, 246, 0.4),
+      0 0 0 1px rgba(59, 130, 246, 0.1);
+      width: 380px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    h3 {
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, #fff 0%, #60a5fa 50%, #3b82f6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.02em;
+      animation: shimmer 3s infinite linear;
+      background-size: 200% 100%;
+    }
+
+    @keyframes shimmer {
+      0% {
+        background-position: -200% center;
+      }
+      100% {
+        background-position: 200% center;
+      }
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: #bae6fd;
+      margin-bottom: 2rem;
+      font-weight: 400;
+      opacity: 0.9;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 1.2rem;
+      font-size: 0.9rem;
+      color: #bae6fd;
+      font-weight: 500;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.9rem;
+      margin-top: 0.4rem;
+      border: 1.5px solid rgba(59, 130, 246, 0.3);
+      border-radius: 12px;
+      background: rgba(10, 10, 25, 0.9);
+      color: #fff;
+      font-size: 1rem;
+      outline: none;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    input:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 12px rgba(59, 130, 246, 0.6);
+      background: rgba(15, 15, 30, 0.95);
+    }
+
+    button {
+      width: 100%;
+      padding: 0.95rem;
+      margin-top: 1.8rem;
+      border: none;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #3b82f6, #1e40af);
+      color: #fff;
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 8px 32px rgba(59, 130, 246, 0.4),
+      0 0 0 1px rgba(59, 130, 246, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transition: left 0.5s ease;
+    }
+
+    button:hover::before {
+      left: 100%;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #1e40af, #3b82f6);
+      box-shadow: 0 12px 40px rgba(59, 130, 246, 0.6),
+      0 0 0 2px rgba(59, 130, 246, 0.3);
+      transform: translateY(-2px) scale(1.01);
+    }
+
+    .footer {
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Enhanced custom cursor */
+    .cursor-dot {
+      width: 10px;
+      height: 10px;
+      background: linear-gradient(135deg, #3b82f6, #60a5fa);
+      border-radius: 50%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 12px rgba(59, 130, 246, 0.6);
+      transition: width 0.2s ease, height 0.2s ease;
+    }
+
+    .cursor-ring {
+      width: 36px;
+      height: 36px;
+      border: 2px solid rgba(59, 130, 246, 0.8);
+      border-radius: 50%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 9998;
+      transform: translate(-50%, -50%);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+    }
+
+    button:hover ~ .cursor-ring,
+    input:hover ~ .cursor-ring {
+      width: 54px;
+      height: 54px;
+      border-color: #60a5fa;
+      border-width: 3px;
+    }
+
+    button:hover ~ .cursor-dot,
+    input:hover ~ .cursor-dot {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .login-container {
+        width: 90%;
+        max-width: 380px;
+        padding: 2rem 1.5rem;
+      }
+
+      h3 {
+        font-size: 1.75rem;
+      }
+
+      /* Show default cursor on mobile */
+      body {
+        cursor: auto;
+      }
+
+      .cursor-dot,
+      .cursor-ring {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<!-- Floating particles -->
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+
+<!-- Login Form -->
+<div class="login-container">
+  <h3>StaffWave</h3>
+  <p class="subtitle">Sign in to your account</p>
+  <form th:action="@{/login}" method="post">
+    <label>
+      Username
+      <input name="username" placeholder="Enter your username" required />
+    </label>
+    <label>
+      Password
+      <input name="password" type="password" placeholder="Enter your password" required />
+    </label>
+    <button type="submit">Login</button>
+  </form>
+  <div class="footer">
+    © 2025 StaffWave. All Rights Reserved.
+  </div>
+</div>
+
+<!-- Custom Cursor Elements -->
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<script>
+  const cursorDot = document.querySelector(".cursor-dot");
+  const cursorRing = document.querySelector(".cursor-ring");
+
+  let mouseX = 0;
+  let mouseY = 0;
+  let dotX = 0;
+  let dotY = 0;
+  let ringX = 0;
+  let ringY = 0;
+
+  window.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  // Smooth cursor movement
+  function animateCursor() {
+    // Instant dot movement
+    dotX = mouseX;
+    dotY = mouseY;
+
+    // Smooth ring movement
+    ringX += (mouseX - ringX) * 0.15;
+    ringY += (mouseY - ringY) * 0.15;
+
+    cursorDot.style.left = dotX + "px";
+    cursorDot.style.top = dotY + "px";
+    cursorRing.style.left = ringX + "px";
+    cursorRing.style.top = ringY + "px";
+
+    requestAnimationFrame(animateCursor);
+  }
+
+  animateCursor();
+</script>
+</body>
+</html>

@@ -1,0 +1,602 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.stuffManagement:StaffManSys:jar:0.0.1-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.springframework.boot:spring-boot-starter-thymeleaf:jar -> duplicate declaration of version (?) @ line 72, column 21
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.springframework.boot:spring-boot-starter-webflux:jar -> duplicate declaration of version (?) @ line 104, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ------------------< com.stuffManagement:StaffManSys >-------------------
+[INFO] Building StaffManSys 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.5.6:run (default-cli) > test-compile @ StaffManSys >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ StaffManSys ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 28 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ StaffManSys ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ StaffManSys ---
+[INFO] skip non existing resourceDirectory /Applications/XAMPP/xamppfiles/htdocs/Staff-Managment-System-main/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ StaffManSys ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.5.6:run (default-cli) < test-compile @ StaffManSys <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.5.6:run (default-cli) @ StaffManSys ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.6)
+
+2026-05-28T15:14:58.110+05:30  INFO 59883 --- [StaffManSys] [           main] c.s.staffmansys.StaffManSysApplication   : Starting StaffManSysApplication using Java 22.0.1 with PID 59883 (/Applications/XAMPP/xamppfiles/htdocs/Staff-Managment-System-main/target/classes started by jayashanguruge in /Applications/XAMPP/xamppfiles/htdocs/Staff-Managment-System-main)
+2026-05-28T15:14:58.111+05:30  INFO 59883 --- [StaffManSys] [           main] c.s.staffmansys.StaffManSysApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-05-28T15:14:59.019+05:30  INFO 59883 --- [StaffManSys] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-28T15:14:59.176+05:30  INFO 59883 --- [StaffManSys] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 149 ms. Found 6 JPA repository interfaces.
+2026-05-28T15:14:59.596+05:30  INFO 59883 --- [StaffManSys] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-05-28T15:14:59.609+05:30  INFO 59883 --- [StaffManSys] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-28T15:14:59.609+05:30  INFO 59883 --- [StaffManSys] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-05-28T15:14:59.650+05:30  INFO 59883 --- [StaffManSys] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-28T15:14:59.651+05:30  INFO 59883 --- [StaffManSys] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1513 ms
+2026-05-28T15:14:59.774+05:30  INFO 59883 --- [StaffManSys] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-28T15:14:59.817+05:30  INFO 59883 --- [StaffManSys] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-05-28T15:14:59.842+05:30  INFO 59883 --- [StaffManSys] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-05-28T15:15:00.047+05:30  INFO 59883 --- [StaffManSys] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-28T15:15:00.070+05:30  INFO 59883 --- [StaffManSys] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-28T15:15:00.249+05:30  INFO 59883 --- [StaffManSys] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@43b6cb1c
+2026-05-28T15:15:00.250+05:30  INFO 59883 --- [StaffManSys] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-28T15:15:00.268+05:30  WARN 59883 --- [StaffManSys] [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-28T15:15:00.269+05:30  WARN 59883 --- [StaffManSys] [           main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-05-28T15:15:00.283+05:30  INFO 59883 --- [StaffManSys] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-28T15:15:00.968+05:30  INFO 59883 --- [StaffManSys] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: alter table attendance_records modify column attendance_status enum ('ABSENT','HALF_DAY','LATE','PRESENT')
+Hibernate: alter table employees modify column access_type enum ('EMPLOYEE','FINANCE','HR','SUPERUSER') not null
+Hibernate: alter table leave_requests modify column leave_type enum ('ANNUAL','CASUAL','SICK','UNPAID') not null
+Hibernate: alter table leave_requests modify column leave_status enum ('APPROVED','PENDING','REJECTED') not null
+2026-05-28T15:15:01.129+05:30  INFO 59883 --- [StaffManSys] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-28T15:15:01.604+05:30  WARN 59883 --- [StaffManSys] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-28T15:15:01.715+05:30  INFO 59883 --- [StaffManSys] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name employeeUserDetailsService
+2026-05-28T15:15:05.111+05:30  INFO 59883 --- [StaffManSys] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-05-28T15:15:05.121+05:30  INFO 59883 --- [StaffManSys] [           main] c.s.staffmansys.StaffManSysApplication   : Started StaffManSysApplication in 7.343 seconds (process running for 7.595)
+2026-05-28T15:15:05.737+05:30  INFO 59883 --- [StaffManSys] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-28T15:15:05.737+05:30  INFO 59883 --- [StaffManSys] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-28T15:15:05.739+05:30  INFO 59883 --- [StaffManSys] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,d2_0.dept_id,d2_0.admin_id,d2_0.dept_name,d2_0.description,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description from departments d1_0 left join employees a1_0 on a1_0.emp_id=d1_0.admin_id left join departments d2_0 on d2_0.dept_id=a1_0.dept_id where d1_0.dept_id=?
+2026-05-28T15:15:06.775+05:30 ERROR 59883 --- [StaffManSys] [nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+java.lang.IllegalArgumentException: Given that there is no default password encoder configured, each password must have a password encoding prefix. Please either prefix this password with '{noop}' or set a default password encoder in `DelegatingPasswordEncoder`.
+	at org.springframework.security.crypto.password.DelegatingPasswordEncoder$UnmappedIdPasswordEncoder.matches(DelegatingPasswordEncoder.java:305) ~[spring-security-crypto-6.5.5.jar:6.5.5]
+	at org.springframework.security.crypto.password.DelegatingPasswordEncoder.matches(DelegatingPasswordEncoder.java:246) ~[spring-security-crypto-6.5.5.jar:6.5.5]
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.additionalAuthenticationChecks(DaoAuthenticationProvider.java:104) ~[spring-security-core-6.5.5.jar:6.5.5]
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:150) ~[spring-security-core-6.5.5.jar:6.5.5]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182) ~[spring-security-core-6.5.5.jar:6.5.5]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:214) ~[spring-security-core-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:87) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:239) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:229) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319) ~[spring-security-config-6.5.5.jar:6.5.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240) ~[spring-security-config-6.5.5.jar:6.5.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1776) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:975) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:493) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+2026-05-28T15:22:49.044+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=47s80ms).
+2026-05-28T15:24:10.170+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m21s144ms).
+2026-05-28T15:28:10.070+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m29s886ms).
+2026-05-28T15:29:02.754+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52s685ms).
+2026-05-28T15:32:10.636+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m7s836ms).
+2026-05-28T15:34:23.746+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m33s999ms).
+2026-05-28T15:37:48.975+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m25s136ms).
+2026-05-28T15:45:53.276+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m34s204ms).
+2026-05-28T15:56:21.744+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m54s280ms).
+2026-05-28T16:11:52.378+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m30s635ms).
+2026-05-28T16:27:22.319+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m29s941ms).
+2026-05-28T16:31:03.292+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m10s955ms).
+$2a$10$JfXj3myWvNoy7g1jFI2qn.7knA69HOKHNp6uAH7Cw2co.fMt4wYaa
+$2a$10$OVzZ4JjQzVTH.2xyVmEvt.mGfmmqu4n/DCv6cHO6yDEA1ASpapVg2
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,d2_0.dept_id,d2_0.admin_id,d2_0.dept_name,d2_0.description,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description from departments d1_0 left join employees a1_0 on a1_0.emp_id=d1_0.admin_id left join departments d2_0 on d2_0.dept_id=a1_0.dept_id where d1_0.dept_id=?
+2026-05-28T17:04:52.907+05:30 ERROR 59883 --- [StaffManSys] [nio-8080-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+java.lang.IllegalArgumentException: Given that there is no default password encoder configured, each password must have a password encoding prefix. Please either prefix this password with '{noop}' or set a default password encoder in `DelegatingPasswordEncoder`.
+	at org.springframework.security.crypto.password.DelegatingPasswordEncoder$UnmappedIdPasswordEncoder.matches(DelegatingPasswordEncoder.java:305) ~[spring-security-crypto-6.5.5.jar:6.5.5]
+	at org.springframework.security.crypto.password.DelegatingPasswordEncoder.matches(DelegatingPasswordEncoder.java:246) ~[spring-security-crypto-6.5.5.jar:6.5.5]
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.additionalAuthenticationChecks(DaoAuthenticationProvider.java:104) ~[spring-security-core-6.5.5.jar:6.5.5]
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:150) ~[spring-security-core-6.5.5.jar:6.5.5]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182) ~[spring-security-core-6.5.5.jar:6.5.5]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:214) ~[spring-security-core-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:87) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:239) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:229) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319) ~[spring-security-config-6.5.5.jar:6.5.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240) ~[spring-security-config-6.5.5.jar:6.5.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1776) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:975) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:493) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+
+$2a$10$8wrxzZ0jMkCdUPHD3URwb.cBnaD.JJmMkYx2MblAs6M2UsUc9JNsW
+$2a$10$SX6XCmMJh1Q3U7dfskxYIucVcT/v7mnAzEPmuCUsisGVvVPS5QXVG
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+$2a$10$OKQlakB5j78Ga.dwHQ0hv.BkCQgkkJKKYFnXqjyfRLIrbNnxnTBeW
+$2a$10$TQHsUaEjXADm3UYt9yDtu.IiYrgFFmxjmD/3jiXbFTenja6vODU5C
+$2a$10$p6rW8n/xsJltPWmmrIJV9.xdbkdLLeGva1xtdUx2cQx3KmKs2kLmq
+$2a$10$rUt5VpAuUhyx5uIZWZEbOuphhbFq2Aazaw6N/XCwPi3/xTbnzAWCC
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,d2_0.dept_id,d2_0.admin_id,d2_0.dept_name,d2_0.description,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description from departments d1_0 left join employees a1_0 on a1_0.emp_id=d1_0.admin_id left join departments d2_0 on d2_0.dept_id=a1_0.dept_id where d1_0.dept_id=?
+2026-05-28T17:13:42.740+05:30 ERROR 59883 --- [StaffManSys] [nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+java.lang.IllegalArgumentException: Given that there is no default password encoder configured, each password must have a password encoding prefix. Please either prefix this password with '{noop}' or set a default password encoder in `DelegatingPasswordEncoder`.
+	at org.springframework.security.crypto.password.DelegatingPasswordEncoder$UnmappedIdPasswordEncoder.matches(DelegatingPasswordEncoder.java:305) ~[spring-security-crypto-6.5.5.jar:6.5.5]
+	at org.springframework.security.crypto.password.DelegatingPasswordEncoder.matches(DelegatingPasswordEncoder.java:246) ~[spring-security-crypto-6.5.5.jar:6.5.5]
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.additionalAuthenticationChecks(DaoAuthenticationProvider.java:104) ~[spring-security-core-6.5.5.jar:6.5.5]
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:150) ~[spring-security-core-6.5.5.jar:6.5.5]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182) ~[spring-security-core-6.5.5.jar:6.5.5]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:214) ~[spring-security-core-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:87) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:239) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:229) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.5.5.jar:6.5.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319) ~[spring-security-config-6.5.5.jar:6.5.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240) ~[spring-security-config-6.5.5.jar:6.5.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1776) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:975) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:493) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+
+$2a$10$WGZyu01YB/sJotyNMF9Qze72tXtvPAnb4oVfokWnFb9gVNPrxfcLy
+$2a$10$gXp4PEmEwsGdpnwkln4XYuzQUTYLuquQRsyaqsyHwgXsagdpPPB96
+$2a$10$zkVAl76jKIxge70i2J64fe7mnFfylhxbxYQijrQz5en5kypjGsP0y
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,d2_0.dept_id,d2_0.admin_id,d2_0.dept_name,d2_0.description,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description from departments d1_0 left join employees a1_0 on a1_0.emp_id=d1_0.admin_id left join departments d2_0 on d2_0.dept_id=a1_0.dept_id where d1_0.dept_id=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,d2_0.dept_id,d2_0.admin_id,d2_0.dept_name,d2_0.description,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description from departments d1_0 left join employees a1_0 on a1_0.emp_id=d1_0.admin_id left join departments d2_0 on d2_0.dept_id=a1_0.dept_id where d1_0.dept_id=?
+Hibernate: select pr1_0.id,pr1_0.allowances,pr1_0.attendance_hours,pr1_0.basic_salary,pr1_0.deductions,pr1_0.emp_id,pr1_0.generated_at,pr1_0.gross_salary,pr1_0.leave_hours,pr1_0.net_hours,pr1_0.net_salary,pr1_0.overtime_hours,pr1_0.overtime_rate,pr1_0.period_month,pr1_0.period_year from payroll_records pr1_0
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,a1_0.dept_id,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 left join departments d1_0 on d1_0.dept_id=e1_0.dept_id left join employees a1_0 on a1_0.emp_id=d1_0.admin_id where e1_0.emp_id=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0
+Hibernate: select d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,d2_0.dept_id,d2_0.admin_id,d2_0.dept_name,d2_0.description,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description from departments d1_0 left join employees a1_0 on a1_0.emp_id=d1_0.admin_id left join departments d2_0 on d2_0.dept_id=a1_0.dept_id where d1_0.dept_id=?
+Hibernate: select d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,d2_0.dept_id,d2_0.admin_id,d2_0.dept_name,d2_0.description,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description from departments d1_0 left join employees a1_0 on a1_0.emp_id=d1_0.admin_id left join departments d2_0 on d2_0.dept_id=a1_0.dept_id where d1_0.dept_id=?
+Hibernate: select ar1_0.attendance_id,ar1_0.emp_id,ar1_0.remarks,ar1_0.attendance_status,ar1_0.time_in,ar1_0.time_out,ar1_0.work_date from attendance_records ar1_0
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,a1_0.dept_id,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 left join departments d1_0 on d1_0.dept_id=e1_0.dept_id left join employees a1_0 on a1_0.emp_id=d1_0.admin_id where e1_0.emp_id=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0
+Hibernate: select d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,d2_0.dept_id,d2_0.admin_id,d2_0.dept_name,d2_0.description,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description from departments d1_0 left join employees a1_0 on a1_0.emp_id=d1_0.admin_id left join departments d2_0 on d2_0.dept_id=a1_0.dept_id where d1_0.dept_id=?
+Hibernate: select d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,d2_0.dept_id,d2_0.admin_id,d2_0.dept_name,d2_0.description,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description from departments d1_0 left join employees a1_0 on a1_0.emp_id=d1_0.admin_id left join departments d2_0 on d2_0.dept_id=a1_0.dept_id where d1_0.dept_id=?
+Hibernate: select d1_0.dept_id,d1_0.admin_id,d1_0.dept_name,d1_0.description from departments d1_0
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,a1_0.dept_id,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 left join departments d1_0 on d1_0.dept_id=e1_0.dept_id left join employees a1_0 on a1_0.emp_id=d1_0.admin_id where e1_0.emp_id=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0
+Hibernate: select d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,d2_0.dept_id,d2_0.admin_id,d2_0.dept_name,d2_0.description,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description from departments d1_0 left join employees a1_0 on a1_0.emp_id=d1_0.admin_id left join departments d2_0 on d2_0.dept_id=a1_0.dept_id where d1_0.dept_id=?
+Hibernate: select d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,d2_0.dept_id,d2_0.admin_id,d2_0.dept_name,d2_0.description,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description from departments d1_0 left join employees a1_0 on a1_0.emp_id=d1_0.admin_id left join departments d2_0 on d2_0.dept_id=a1_0.dept_id where d1_0.dept_id=?
+Hibernate: select ar1_0.attendance_id,ar1_0.emp_id,ar1_0.remarks,ar1_0.attendance_status,ar1_0.time_in,ar1_0.time_out,ar1_0.work_date from attendance_records ar1_0
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,a1_0.dept_id,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 left join departments d1_0 on d1_0.dept_id=e1_0.dept_id left join employees a1_0 on a1_0.emp_id=d1_0.admin_id where e1_0.emp_id=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0
+Hibernate: select d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,d2_0.dept_id,d2_0.admin_id,d2_0.dept_name,d2_0.description,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description from departments d1_0 left join employees a1_0 on a1_0.emp_id=d1_0.admin_id left join departments d2_0 on d2_0.dept_id=a1_0.dept_id where d1_0.dept_id=?
+Hibernate: select d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,d2_0.dept_id,d2_0.admin_id,d2_0.dept_name,d2_0.description,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description from departments d1_0 left join employees a1_0 on a1_0.emp_id=d1_0.admin_id left join departments d2_0 on d2_0.dept_id=a1_0.dept_id where d1_0.dept_id=?
+Hibernate: select pr1_0.id,pr1_0.allowances,pr1_0.attendance_hours,pr1_0.basic_salary,pr1_0.deductions,pr1_0.emp_id,pr1_0.generated_at,pr1_0.gross_salary,pr1_0.leave_hours,pr1_0.net_hours,pr1_0.net_salary,pr1_0.overtime_hours,pr1_0.overtime_rate,pr1_0.period_month,pr1_0.period_year from payroll_records pr1_0
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,a1_0.dept_id,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 left join departments d1_0 on d1_0.dept_id=e1_0.dept_id left join employees a1_0 on a1_0.emp_id=d1_0.admin_id where e1_0.emp_id=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,d2_0.dept_id,d2_0.admin_id,d2_0.dept_name,d2_0.description,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description from departments d1_0 left join employees a1_0 on a1_0.emp_id=d1_0.admin_id left join departments d2_0 on d2_0.dept_id=a1_0.dept_id where d1_0.dept_id=?
+Hibernate: select pr1_0.id,pr1_0.allowances,pr1_0.attendance_hours,pr1_0.basic_salary,pr1_0.deductions,pr1_0.emp_id,pr1_0.generated_at,pr1_0.gross_salary,pr1_0.leave_hours,pr1_0.net_hours,pr1_0.net_salary,pr1_0.overtime_hours,pr1_0.overtime_rate,pr1_0.period_month,pr1_0.period_year from payroll_records pr1_0
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,a1_0.dept_id,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 left join departments d1_0 on d1_0.dept_id=e1_0.dept_id left join employees a1_0 on a1_0.emp_id=d1_0.admin_id where e1_0.emp_id=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0
+Hibernate: select d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,d2_0.dept_id,d2_0.admin_id,d2_0.dept_name,d2_0.description,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description from departments d1_0 left join employees a1_0 on a1_0.emp_id=d1_0.admin_id left join departments d2_0 on d2_0.dept_id=a1_0.dept_id where d1_0.dept_id=?
+Hibernate: select d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,d2_0.dept_id,d2_0.admin_id,d2_0.dept_name,d2_0.description,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description from departments d1_0 left join employees a1_0 on a1_0.emp_id=d1_0.admin_id left join departments d2_0 on d2_0.dept_id=a1_0.dept_id where d1_0.dept_id=?
+Hibernate: select pr1_0.id,pr1_0.allowances,pr1_0.attendance_hours,pr1_0.basic_salary,pr1_0.deductions,pr1_0.emp_id,pr1_0.generated_at,pr1_0.gross_salary,pr1_0.leave_hours,pr1_0.net_hours,pr1_0.net_salary,pr1_0.overtime_hours,pr1_0.overtime_rate,pr1_0.period_month,pr1_0.period_year from payroll_records pr1_0
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,a1_0.dept_id,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 left join departments d1_0 on d1_0.dept_id=e1_0.dept_id left join employees a1_0 on a1_0.emp_id=d1_0.admin_id where e1_0.emp_id=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,d2_0.dept_id,d2_0.admin_id,d2_0.dept_name,d2_0.description,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description from departments d1_0 left join employees a1_0 on a1_0.emp_id=d1_0.admin_id left join departments d2_0 on d2_0.dept_id=a1_0.dept_id where d1_0.dept_id=?
+Hibernate: select pr1_0.id,pr1_0.allowances,pr1_0.attendance_hours,pr1_0.basic_salary,pr1_0.deductions,pr1_0.emp_id,pr1_0.generated_at,pr1_0.gross_salary,pr1_0.leave_hours,pr1_0.net_hours,pr1_0.net_salary,pr1_0.overtime_hours,pr1_0.overtime_rate,pr1_0.period_month,pr1_0.period_year from payroll_records pr1_0
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,a1_0.dept_id,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 left join departments d1_0 on d1_0.dept_id=e1_0.dept_id left join employees a1_0 on a1_0.emp_id=d1_0.admin_id where e1_0.emp_id=?
+Hibernate: select pr1_0.id,pr1_0.allowances,pr1_0.attendance_hours,pr1_0.basic_salary,pr1_0.deductions,pr1_0.emp_id,e1_0.emp_id,e1_0.access_type,e1_0.city,d1_0.dept_id,d1_0.admin_id,d1_0.dept_name,d1_0.description,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username,pr1_0.generated_at,pr1_0.gross_salary,pr1_0.leave_hours,pr1_0.net_hours,pr1_0.net_salary,pr1_0.overtime_hours,pr1_0.overtime_rate,pr1_0.period_month,pr1_0.period_year from payroll_records pr1_0 join employees e1_0 on e1_0.emp_id=pr1_0.emp_id left join departments d1_0 on d1_0.dept_id=e1_0.dept_id where pr1_0.id=?
+Hibernate: select pr1_0.id,pr1_0.allowances,pr1_0.attendance_hours,pr1_0.basic_salary,pr1_0.deductions,pr1_0.emp_id,e1_0.emp_id,e1_0.access_type,e1_0.city,d1_0.dept_id,d1_0.admin_id,d1_0.dept_name,d1_0.description,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username,pr1_0.generated_at,pr1_0.gross_salary,pr1_0.leave_hours,pr1_0.net_hours,pr1_0.net_salary,pr1_0.overtime_hours,pr1_0.overtime_rate,pr1_0.period_month,pr1_0.period_year from payroll_records pr1_0 join employees e1_0 on e1_0.emp_id=pr1_0.emp_id left join departments d1_0 on d1_0.dept_id=e1_0.dept_id where pr1_0.id=?
+Hibernate: select pr1_0.id,pr1_0.allowances,pr1_0.attendance_hours,pr1_0.basic_salary,pr1_0.deductions,pr1_0.emp_id,pr1_0.generated_at,pr1_0.gross_salary,pr1_0.leave_hours,pr1_0.net_hours,pr1_0.net_salary,pr1_0.overtime_hours,pr1_0.overtime_rate,pr1_0.period_month,pr1_0.period_year from payroll_records pr1_0
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,a1_0.dept_id,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 left join departments d1_0 on d1_0.dept_id=e1_0.dept_id left join employees a1_0 on a1_0.emp_id=d1_0.admin_id where e1_0.emp_id=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0
+Hibernate: select d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,d2_0.dept_id,d2_0.admin_id,d2_0.dept_name,d2_0.description,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description from departments d1_0 left join employees a1_0 on a1_0.emp_id=d1_0.admin_id left join departments d2_0 on d2_0.dept_id=a1_0.dept_id where d1_0.dept_id=?
+Hibernate: select d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,d2_0.dept_id,d2_0.admin_id,d2_0.dept_name,d2_0.description,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description from departments d1_0 left join employees a1_0 on a1_0.emp_id=d1_0.admin_id left join departments d2_0 on d2_0.dept_id=a1_0.dept_id where d1_0.dept_id=?
+Hibernate: select lr1_0.leave_id,lr1_0.approver_id,lr1_0.decision_date,lr1_0.emp_id,lr1_0.end_date,lr1_0.leave_type,lr1_0.reason,lr1_0.start_date,lr1_0.leave_status from leave_requests lr1_0
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,a1_0.dept_id,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 left join departments d1_0 on d1_0.dept_id=e1_0.dept_id left join employees a1_0 on a1_0.emp_id=d1_0.admin_id where e1_0.emp_id=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,a1_0.dept_id,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 left join departments d1_0 on d1_0.dept_id=e1_0.dept_id left join employees a1_0 on a1_0.emp_id=d1_0.admin_id where e1_0.emp_id=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0
+Hibernate: select d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,d2_0.dept_id,d2_0.admin_id,d2_0.dept_name,d2_0.description,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description from departments d1_0 left join employees a1_0 on a1_0.emp_id=d1_0.admin_id left join departments d2_0 on d2_0.dept_id=a1_0.dept_id where d1_0.dept_id=?
+Hibernate: select d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,d2_0.dept_id,d2_0.admin_id,d2_0.dept_name,d2_0.description,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description from departments d1_0 left join employees a1_0 on a1_0.emp_id=d1_0.admin_id left join departments d2_0 on d2_0.dept_id=a1_0.dept_id where d1_0.dept_id=?
+Hibernate: select lr1_0.leave_id,lr1_0.approver_id,lr1_0.decision_date,lr1_0.emp_id,lr1_0.end_date,lr1_0.leave_type,lr1_0.reason,lr1_0.start_date,lr1_0.leave_status from leave_requests lr1_0
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,a1_0.dept_id,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 left join departments d1_0 on d1_0.dept_id=e1_0.dept_id left join employees a1_0 on a1_0.emp_id=d1_0.admin_id where e1_0.emp_id=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,a1_0.dept_id,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 left join departments d1_0 on d1_0.dept_id=e1_0.dept_id left join employees a1_0 on a1_0.emp_id=d1_0.admin_id where e1_0.emp_id=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0
+Hibernate: select d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,d2_0.dept_id,d2_0.admin_id,d2_0.dept_name,d2_0.description,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description from departments d1_0 left join employees a1_0 on a1_0.emp_id=d1_0.admin_id left join departments d2_0 on d2_0.dept_id=a1_0.dept_id where d1_0.dept_id=?
+Hibernate: select d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,d2_0.dept_id,d2_0.admin_id,d2_0.dept_name,d2_0.description,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description from departments d1_0 left join employees a1_0 on a1_0.emp_id=d1_0.admin_id left join departments d2_0 on d2_0.dept_id=a1_0.dept_id where d1_0.dept_id=?
+Hibernate: select pr1_0.id,pr1_0.allowances,pr1_0.attendance_hours,pr1_0.basic_salary,pr1_0.deductions,pr1_0.emp_id,pr1_0.generated_at,pr1_0.gross_salary,pr1_0.leave_hours,pr1_0.net_hours,pr1_0.net_salary,pr1_0.overtime_hours,pr1_0.overtime_rate,pr1_0.period_month,pr1_0.period_year from payroll_records pr1_0
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,a1_0.dept_id,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 left join departments d1_0 on d1_0.dept_id=e1_0.dept_id left join employees a1_0 on a1_0.emp_id=d1_0.admin_id where e1_0.emp_id=?
+Hibernate: select pr1_0.id,pr1_0.allowances,pr1_0.attendance_hours,pr1_0.basic_salary,pr1_0.deductions,pr1_0.emp_id,e1_0.emp_id,e1_0.access_type,e1_0.city,d1_0.dept_id,d1_0.admin_id,d1_0.dept_name,d1_0.description,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username,pr1_0.generated_at,pr1_0.gross_salary,pr1_0.leave_hours,pr1_0.net_hours,pr1_0.net_salary,pr1_0.overtime_hours,pr1_0.overtime_rate,pr1_0.period_month,pr1_0.period_year from payroll_records pr1_0 join employees e1_0 on e1_0.emp_id=pr1_0.emp_id left join departments d1_0 on d1_0.dept_id=e1_0.dept_id where pr1_0.id=?
+Hibernate: select pr1_0.id,pr1_0.allowances,pr1_0.attendance_hours,pr1_0.basic_salary,pr1_0.deductions,pr1_0.emp_id,pr1_0.generated_at,pr1_0.gross_salary,pr1_0.leave_hours,pr1_0.net_hours,pr1_0.net_salary,pr1_0.overtime_hours,pr1_0.overtime_rate,pr1_0.period_month,pr1_0.period_year from payroll_records pr1_0
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,a1_0.dept_id,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 left join departments d1_0 on d1_0.dept_id=e1_0.dept_id left join employees a1_0 on a1_0.emp_id=d1_0.admin_id where e1_0.emp_id=?
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,d2_0.dept_id,d2_0.admin_id,d2_0.dept_name,d2_0.description,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description from departments d1_0 left join employees a1_0 on a1_0.emp_id=d1_0.admin_id left join departments d2_0 on d2_0.dept_id=a1_0.dept_id where d1_0.dept_id=?
+2026-05-28T17:31:38.789+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m34s872ms).
+Hibernate: select e1_0.emp_id,e1_0.access_type,e1_0.city,e1_0.dept_id,e1_0.dob,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.last_name,e1_0.nic,e1_0.password,e1_0.position,e1_0.postal_code,e1_0.status,e1_0.street,e1_0.username from employees e1_0 where e1_0.username=?
+Hibernate: select d1_0.dept_id,a1_0.emp_id,a1_0.access_type,a1_0.city,d2_0.dept_id,d2_0.admin_id,d2_0.dept_name,d2_0.description,a1_0.dob,a1_0.email,a1_0.first_name,a1_0.hire_date,a1_0.last_name,a1_0.nic,a1_0.password,a1_0.position,a1_0.postal_code,a1_0.status,a1_0.street,a1_0.username,d1_0.dept_name,d1_0.description from departments d1_0 left join employees a1_0 on a1_0.emp_id=d1_0.admin_id left join departments d2_0 on d2_0.dept_id=a1_0.dept_id where d1_0.dept_id=?
+2026-05-28T17:48:19.938+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m41s130ms).
+2026-05-28T18:01:55.529+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m35s592ms).
+2026-05-28T18:17:26.847+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m31s320ms).
+2026-05-28T19:27:18.028+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h9m21s175ms).
+2026-05-28T19:34:07.488+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m18s703ms).
+2026-05-28T19:44:18.004+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m10s511ms).
+2026-05-29T08:31:04.103+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10h11m34s835ms).
+$2a$10$pNJSJgZHpBrgp2gpLNm9Lu7yjIbYxVF/EH/0SMDFp4ZvI58G132.K
+2026-05-29T10:17:10.511+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m33s985ms).
+2026-05-29T10:18:46.795+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m36s295ms).
+2026-05-29T10:20:44.055+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56s859ms).
+2026-05-29T11:11:38.324+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52s240ms).
+2026-05-29T11:14:36.634+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58s277ms).
+2026-05-29T11:15:26.663+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s29ms).
+2026-05-29T11:24:38.451+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m11s542ms).
+2026-05-29T11:26:07.026+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58s562ms).
+2026-05-29T11:27:02.718+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55s693ms).
+2026-05-29T11:28:31.378+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58s430ms).
+2026-05-29T11:36:48.100+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m46s715ms).
+2026-05-29T11:37:46.424+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58s324ms).
+2026-05-29T11:39:03.063+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46s624ms).
+2026-05-29T11:40:01.453+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58s391ms).
+2026-05-29T11:41:29.897+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58s439ms).
+2026-05-29T11:51:19.041+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m49s142ms).
+2026-05-29T11:52:47.425+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58s362ms).
+2026-05-29T11:57:34.415+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m16s985ms).
+2026-05-29T11:59:39.483+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m5s69ms).
+2026-05-29T12:02:19.222+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58s290ms).
+2026-05-29T12:07:49.951+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58s383ms).
+2026-05-29T12:08:41.443+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=51s494ms).
+2026-05-29T12:10:09.750+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58s298ms).
+2026-05-29T12:15:25.520+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58s382ms).
+2026-05-29T12:16:59.628+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m34s108ms).
+2026-05-29T12:18:27.340+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=57s707ms).
+2026-05-29T12:19:56.026+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58s669ms).
+2026-05-29T12:21:54.334+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58s289ms).
+2026-05-29T12:25:56.007+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m31s657ms).
+2026-05-29T13:17:39.073+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m42s730ms).
+2026-05-29T13:19:11.080+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m32s11ms).
+2026-05-29T13:24:37.537+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m59s98ms).
+2026-05-29T13:28:30.222+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m52s685ms).
+2026-05-29T13:32:25.102+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m54s880ms).
+2026-05-29T13:35:21.856+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m56s754ms).
+2026-05-29T13:37:13.756+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=51s887ms).
+2026-05-29T13:42:40.703+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m56s915ms).
+2026-05-29T13:45:55.031+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m14s335ms).
+2026-05-29T13:47:45.216+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m50s188ms).
+2026-05-29T14:00:14.451+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m51s720ms).
+2026-05-29T14:14:05.127+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m50s679ms).
+2026-05-29T14:16:01.033+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m55s895ms).
+2026-05-29T14:20:33.445+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m32s422ms).
+2026-05-29T14:30:00.014+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m26s570ms).
+2026-05-29T14:31:44.327+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m44s313ms).
+2026-05-29T14:46:56.882+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m12s512ms).
+2026-05-29T15:02:27.329+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m30s488ms).
+2026-05-29T15:17:58.002+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m30s675ms).
+2026-05-29T15:24:54.084+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m56s82ms).
+2026-05-29T15:28:04.817+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m10s726ms).
+2026-05-29T15:37:45.208+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m40s398ms).
+2026-05-29T15:53:15.927+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m30s719ms).
+2026-05-29T16:08:46.735+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m30s808ms).
+2026-05-29T16:24:17.719+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m30s984ms).
+2026-05-29T16:45:11.745+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20m54s27ms).
+2026-05-29T17:00:41.769+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m30s23ms).
+2026-05-29T17:16:12.706+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m30s937ms).
+2026-05-29T17:27:31.981+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m19s275ms).
+2026-05-29T18:31:11.930+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h3m39s949ms).
+2026-05-29T19:24:03.304+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52m51s374ms).
+2026-05-29T19:32:07.322+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m4s19ms).
+2026-05-29T20:26:10.552+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54m3s230ms).
+2026-05-29T20:33:07.497+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m14s567ms).
+2026-05-29T21:23:10.529+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50m3s33ms).
+2026-05-29T21:34:03.211+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m52s682ms).
+2026-05-29T21:44:49.796+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m46s582ms).
+2026-05-29T22:30:45.802+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45m56s7ms).
+2026-05-29T22:35:08.047+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m22s247ms).
+2026-05-29T22:54:13.138+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=19m5s90ms).
+2026-05-29T23:36:03.987+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=41m50s849ms).
+2026-05-30T00:30:04.211+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54m224ms).
+2026-05-30T00:36:57.200+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m52s989ms).
+2026-05-30T01:31:07.335+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54m10s135ms).
+2026-05-30T01:38:08.318+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m984ms).
+2026-05-30T02:32:18.891+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54m10s573ms).
+2026-05-30T02:39:18.349+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m59s458ms).
+2026-05-30T03:33:21.422+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54m3s71ms).
+2026-05-30T04:34:06.718+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h45s297ms).
+2026-05-30T04:41:06.647+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m59s928ms).
+2026-05-30T05:22:22.659+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=41m16s13ms).
+2026-05-30T05:36:24.465+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m1s806ms).
+2026-05-30T06:30:41.118+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54m16s653ms).
+2026-05-30T06:43:11.952+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m30s835ms).
+2026-05-30T07:44:17.067+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h1m5s114ms).
+2026-05-30T08:45:18.876+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h1m1s810ms).
+2026-05-30T09:46:21.396+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h1m2s520ms).
+2026-05-30T10:47:21.342+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h59s946ms).
+2026-05-30T11:48:09.730+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h48s388ms).
+2026-05-30T12:49:23.156+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h1m13s425ms).
+2026-05-30T14:31:40.751+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h42m17s505ms).
+2026-05-30T14:50:02.780+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m22s120ms).
+2026-05-30T15:51:08.615+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h1m5s835ms).
+2026-05-30T16:52:12.077+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h1m3s462ms).
+2026-05-30T17:53:04.949+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h52s872ms).
+2026-05-30T18:54:13.625+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h1m8s675ms).
+2026-05-30T19:55:14.333+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h1m709ms).
+2026-05-30T20:56:16.101+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h1m1s767ms).
+2026-05-30T21:57:18.224+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h1m2s124ms).
+2026-05-30T22:19:15.115+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=21m56s889ms).
+2026-05-30T23:59:05.382+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h39m50s269ms).
+2026-05-31T01:00:01.404+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h56s20ms).
+2026-05-31T01:18:19.828+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m18s425ms).
+2026-05-31T02:01:08.227+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=42m48s399ms).
+2026-05-31T02:42:52.128+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=41m43s901ms).
+2026-05-31T04:02:48.990+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h19m56s851ms).
+2026-05-31T04:18:46.211+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m57s232ms).
+2026-05-31T05:25:58.165+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h7m11s955ms).
+2026-05-31T06:04:57.118+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=38m58s953ms).
+2026-05-31T06:15:23.467+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m26s349ms).
+2026-05-31T08:06:46.155+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h51m22s688ms).
+2026-05-31T09:07:48.423+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h1m2s268ms).
+2026-05-31T10:40:23.016+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h32m34s592ms).
+2026-05-31T12:10:35.972+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h30m12s957ms).
+2026-05-31T13:11:34.284+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h58s311ms).
+2026-05-31T14:12:32.576+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h58s293ms).
+2026-05-31T14:28:10.740+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m38s161ms).
+2026-05-31T15:13:36.583+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45m25s846ms).
+2026-05-31T16:14:39.957+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h1m3s374ms).
+2026-05-31T17:15:35.024+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h55s67ms).
+2026-05-31T18:16:38.283+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h1m3s259ms).
+2026-05-31T19:17:35.233+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h56s949ms).
+2026-05-31T21:19:16.657+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h1m41s425ms).
+2026-05-31T21:57:46.152+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=38m29s494ms).
+2026-05-31T22:13:51.685+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m5s531ms).
+2026-05-31T22:20:30.225+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m38s543ms).
+2026-05-31T22:37:46.852+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m16s627ms).
+2026-05-31T22:42:21.851+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m34s998ms).
+2026-05-31T22:46:43.679+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m21s829ms).
+2026-06-01T01:03:25.906+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h16m42s227ms).
+2026-06-01T02:09:52.657+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h6m26s750ms).
+2026-06-01T04:10:21.246+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h28s588ms).
+2026-06-01T05:11:07.713+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h46s469ms).
+2026-06-01T06:11:55.187+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h47s473ms).
+2026-06-01T06:24:53.278+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m58s84ms).
+2026-06-01T06:25:23.001+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s730ms), soft-evicting connections from pool.
+2026-06-01T07:13:00.815+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=47m37s813ms).
+2026-06-01T07:17:53.504+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m52s690ms).
+2026-06-01T08:14:11.725+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56m18s216ms).
+2026-06-01T08:24:34.909+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m23s189ms).
+2026-06-01T08:26:50.831+05:30  WARN 59883 --- [StaffManSys] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m15s919ms).

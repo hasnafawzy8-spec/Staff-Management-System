@@ -1,0 +1,84 @@
+/* src/main/resources/static/css/account.css */
+:root{
+    --bg:#ffffff; --ink:#0f172a; --muted:#475569; --accent:#0ea5e9;
+    --card:#ffffff; --shadow:0 6px 18px rgba(15,23,42,.06);
+    --ring: rgba(14,165,233,.25); --line:#e5e7eb;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;line-height:1.45}
+
+.layout{display:grid;grid-template-columns:260px 1fr;min-height:100dvh}
+@media (max-width:880px){.layout{grid-template-columns:1fr}}
+
+.side{padding:22px 18px;background:#fafafa;border-right:1px solid var(--line)}
+.brand{font-weight:700;letter-spacing:.2px;margin-bottom:16px}
+.profile-mini{padding:14px;background:var(--card);border-radius:16px;box-shadow:var(--shadow);margin-bottom:18px;font-size:.92rem}
+.profile-mini b{display:block}
+.muted{color:var(--muted)}
+
+.nav h5{margin:.75rem 0 .25rem;color:var(--muted);font-weight:600;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em}
+.nav a{display:block;text-decoration:none;color:var(--ink);padding:10px 12px;border-radius:12px;margin:6px 0;background:var(--card);box-shadow:var(--shadow)}
+.nav a:hover{outline:2px solid var(--ring)}
+.nav a.active{outline:2px solid var(--ring)}
+
+.main{padding:28px}
+.heading{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.badge{background:#eef2ff;color:#4338ca;padding:4px 10px;border-radius:999px;font-size:.78rem;font-weight:600}
+
+.card{background:var(--card);border-radius:20px;box-shadow:var(--shadow);padding:18px}
+.rows .row{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line)}
+.rows .row:last-child{border-bottom:none}
+.rows .row span{color:var(--muted)}
+
+.form .grid{display:grid;gap:14px;grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:720px){.form .grid{grid-template-columns:1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field span{font-size:.88rem;color:var(--muted)}
+.field input{
+    width:100%;padding:12px 12px;border:1px solid var(--line);border-radius:14px;background:#fff;
+    outline:none;box-shadow:var(--shadow)
+}
+.field input:focus{border-color:var(--accent);outline:2px solid var(--ring)}
+
+.col-span-2{grid-column:span 2}
+@media (max-width:720px){.col-span-2{grid-column:span 1}}
+
+.actions{display:flex;justify-content:flex-end;gap:10px;margin-top:14px}
+.btn{appearance:none;border:none;border-radius:14px;padding:11px 14px;font-weight:600;cursor:pointer;box-shadow:var(--shadow)}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.primary:hover{filter:brightness(.95)}
+.btn.ghost{background:#fff;border:1px solid var(--line);color:var(--ink)}
+.btn.ghost:hover{outline:2px solid var(--ring)}
+/* Extend in src/main/resources/static/css/account.css */
+.table-wrapper{overflow-x:auto;margin-top:12px}
+.table{width:100%;border-collapse:collapse;font-size:.92rem}
+.table th,.table td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left}
+.table th{color:var(--muted);font-weight:600;font-size:.8rem;text-transform:uppercase;letter-spacing:.05em}
+.table tr:hover td{background:#f9fafb}
+/* Add to src/main/resources/static/css/account.css */
+.radio{
+    display:inline-flex;align-items:center;gap:6px;
+    margin-right:18px;padding:8px 12px;
+    background:#fff;border:1px solid var(--line);
+    border-radius:12px;box-shadow:var(--shadow);cursor:pointer;
+}
+.radio input{accent-color:var(--accent)}
+.radio span{font-weight:600}
+.radio:hover{outline:2px solid var(--ring)}
+/* src/main/resources/static/css/account.css (extend for new forms) */
+.field{display:flex;flex-direction:column;gap:6px}
+.field span{font-size:.88rem;color:var(--muted)}
+.field input{
+    width:100%;padding:12px;border:1px solid var(--line);border-radius:14px;background:#fff;
+    outline:none;box-shadow:var(--shadow)
+}
+.field input:focus{border-color:var(--accent);outline:2px solid var(--ring)}
+
+.actions{display:flex;justify-content:flex-end;gap:10px;margin-top:18px}
+.btn{appearance:none;border:none;border-radius:14px;padding:12px 14px;font-weight:600;cursor:pointer;box-shadow:var(--shadow)}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.primary:hover{filter:brightness(.95)}
+.btn.ghost{background:#fff;border:1px solid var(--line);color:var(--ink)}
+.btn.ghost:hover{outline:2px solid var(--ring)}
